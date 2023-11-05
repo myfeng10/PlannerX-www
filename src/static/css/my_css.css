@@ -1,0 +1,121 @@
+.float_content {
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+  z-index: -123456;
+}
+
+.float_content_active {
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  background: #eee;
+  transform: translateY(-30px);
+  opacity: 1;
+  z-index: 123456;
+  box-shadow: 0px 5px 20px 1px black !important;
+}
+
+.float_btn {
+  pointer-events: auto;
+  text-align: right;
+  z-index: 123456;
+}
+
+.float_box {
+  pointer-events: none;
+  position: fixed;
+  right: 0rem;
+  bottom: 5rem;
+  display: inline;
+  z-index: 1;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.chosen-choices {
+  background-color: #3a3b45 !important;
+  background-image: none !important;
+  border-radius: 25px !important;
+  border: 0 !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  font-size: 1.2rem !important;
+  /* padding-left: 1.5rem !important; */
+}
+
+.chosen-container {
+  border-radius: 25px !important;
+  width: 100% !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.chosen-container:hover {
+  border-radius: 25px !important;
+  border-color: #bac8f3;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+.chosen-drop {
+  background-color: #3a3b45 !important;
+  box-shadow: 0px 5px 20px 1px black !important;
+  border-radius: 25px !important;
+  border: 0 !important;
+  color: white !important;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.active-result {
+  line-height: 1.5rem !important;
+  color: white !important;
+  margin-left: 1.5rem !important;
+  margin-right: 1.5rem !important;
+}
+
+li.highlighted {
+  border-radius: 5px;
+  background-color: #4e80ee !important;
+  background-image: none !important;
+}
+
+.result-selected {
+  color: lightslategray !important;
+  margin-left: 1.5rem !important;
+}
+
+.chosen-search-input {
+  margin-top: 3px !important;
+  height: calc(1.5em + 0.75rem) !important;
+}
+
+.search-choice {
+  border: 0 !important;
+  border-radius: 20px !important;
+  height: calc(1.5em + 0.5rem) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  text-overflow: ellipsis;
+  max-width: 200px;
+  margin: 5px 5px 5px 0 !important;
+  padding-left: 8px !important;
+}
+
+.search-choice span {
+  text-overflow: ellipsis;
+  max-width: 8.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 1.5 !important;
+}
+
+.search-choice-close {
+  right: 4px !important;
+}

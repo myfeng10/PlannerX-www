@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './static/css/my_css.css'
+import './static/css/sb-admin-2.css'
+import './static/css/sb-admin-2.min.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

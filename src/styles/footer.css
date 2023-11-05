@@ -1,0 +1,18 @@
+/* footer.css */
+
+/* Styles for the footer */
+.footer {
+    display: flex;
+    color:rgb(167, 189, 207);
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100px; /* You can adjust the height as needed */
+    background-color: #3e3e4b; /* Add your preferred background color */
+  }
+  
+  /* Styles for the copyright text */
+  .footer p {
+    margin: 0; /* Remove any default margins */
+    font-size: 0.8rem;
+  }
+  
