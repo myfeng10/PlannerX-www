@@ -8,33 +8,28 @@ const AlertMessages = ({ messages }) => {
   }
 
   return (
-    <React.Fragment>
-      <div style={{ height: '50px' }}></div>
-      <div className="row">
-        <div className="col-md-9 mx-auto mb-3">
-          <div className="alert alert-success alert-dismissable">
-            <button
-              onClick={() => setIsVisible(false)}
-              type="button"
-              className="close"
-              aria-label="Close"
-              style={{
-                position: 'relative',
-                zIndex: 1,
-              }}
-            >
-              &times;
-            </button>
-            {messages.map((message, index) => (
-              <div key={index} className="alert font-weight-bold m-0 p-0">
-                {message}
-              </div>
-            ))}
+    <div className="font-sans mx-72 pb-10">
+        <div className="p-4 text-lg bg-green-100 text-green-900 rounded-lg relative">
+                <button
+                  onClick={() => setIsVisible(false)}
+                  type="button"
+                  className="close absolute top-0 right-0 m-2 "
+                  aria-label="Close"
+                >
+                  &times;
+                </button>
+                <div className="flex flex-col">
+                {messages.map((message, index) => (
+                  <div key={index} className="font-bold m-0 p-0">
+                    {message}
+                  </div>
+                ))}
+                </div>
           </div>
-        </div>
-      </div>
-    </React.Fragment>
+    </div>
+       
   );
+  
 };
 
 export default AlertMessages;

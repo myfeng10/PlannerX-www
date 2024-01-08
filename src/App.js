@@ -1,41 +1,43 @@
 import React from 'react';
+import { AuthProvider } from './AuthContext';
 import './App.css';
-import Topbar from './components/Topbar';
+import{Route,Routes} from "react-router-dom";
 import Footer from './components/Footer';
-import AlertMessages from './components/AlertMessages';
-import { JumbotronComponent, FeatureCard, TutorialSection } from './pages/Home/Home';
-function App() {
+import Home from './pages/Home';
+import Dashboard from './pages/Dashboard';
+import AddPlan from './pages/AddPlan';
+import NavBar from './components/NavBar';
+import Setting from './pages/Setting';
 
+function App() {
   return (
-    <div>
-      {/* Pass the loggedIn status as a prop */}
-      <Topbar />
-      <div className='main'>
-      <AlertMessages messages={["Our database is NOW updated to Spring 2024. Let's plan it out!", "Remember our NEW website link: www.myplannerx.com"]} />
-      <JumbotronComponent />
-      <div className="col-md-9 mx-auto">
-        <div style={{ height: '50px' }}></div>
-        <div className="d-flex align-items-center justify-content-center mb-4">
-          <div className="h3 mb-0 text-white font-weight-bold">Key Features</div>
-        </div>
-        <div className="row">
-          <FeatureCard title="Massive Data" description={['Over 4k courses recorded per semester', 'Over 3k prof data from RateMyProfessor']} icon="fa-database" />
-          <FeatureCard title="Easy to Use" description={['Take 5 min to fill in a few blanks', 'Get up to 1k schedules in 1 sec']} icon="fa-check" />
-          <FeatureCard title="Smart Algorithm" description={['Auto-schedule classes w/o time conflict', 'Auto-rank schedules to find the best one']} icon="fa-code" />
-          <FeatureCard title="Visualization" description={['Intuitionistic time table for each schedule', 'Easily save schedule images for sharing']} icon="fa-calendar-days" />
-        </div>
-        <div style={{ height: '50px' }}></div>
-        <div className="d-flex align-items-center justify-content-center mb-4">
-          <div className="h3 mb-0 text-white font-weight-bold">How to Use?</div>
-        </div>
-        <div className="row">
-          <TutorialSection />
-        </div>
-      </div>
-    </div>
-      <Footer />
-    </div>
+    <>
+    <AuthProvider>
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="*" element={<WithNavBar />} />
+
+        </Routes>
+        <Footer />
+    </AuthProvider>
+     
+
+    </>
   );
 }
+
+
+const WithNavBar = () => {
+  return (
+    <>
+      <NavBar />
+      <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/addPlan" element={<AddPlan />} />
+          <Route path="/setting" element={<Setting />} />
+      </Routes>
+    </>
+  );
+};
 
 export default App;
