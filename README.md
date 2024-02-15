@@ -1,70 +1,27 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Course Planning Tool Frontend
+## Welcome to the frontend for our Course Planning Tool! 
+ This React-based application is designed to streamline the process of planning your academic journey. Below, you'll find a guide to the various pages and features of our tool.
 
-## Available Scripts
+### Entrance Page
+The entrance page welcomes you to our application and provides navigation to either log in or sign up.
+![image](https://github.com/myfeng10/PlannerX-www/assets/116971980/3cba876c-1fcf-4eef-8eec-0078ae576fb3)
+![image](https://github.com/myfeng10/PlannerX-www/assets/116971980/2d95bbb3-6036-4432-a197-1d65a37aec87)
 
-In the project directory, you can run:
+### Dashboard /dashboard
+Once logged in, you'll be directed to the Dashboard, where you can view your current plans and access other features.
+![image](https://github.com/myfeng10/PlannerX-www/assets/116971980/6ef70dc3-4e72-4c51-bdb0-12cc740a03e6)
 
-### `npm start`
+### Plan Creation Page /addPlan
+This page allows you to create a new academic plan by selecting courses and defining semesters.
+![image](https://github.com/myfeng10/PlannerX-www/assets/116971980/6ef70dc3-4e72-4c51-bdb0-12cc740a03e6)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Plan Creation View
+Edit Plan Page: /editPlan/1
+Here, you can edit an existing plan. Replace 1 with the planId of the plan you wish to edit.
+![image](https://github.com/myfeng10/PlannerX-www/assets/116971980/36f9e7ac-a398-41e9-ba8c-56423e4e91a8)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Edit Plan View
+![image](https://github.com/myfeng10/PlannerX-www/assets/116971980/0ecc7d3b-0af4-4008-8142-7affc5f7475b)
+As you adjust the slider, a GET request is sent to the Flask backend, fetching detailed information for this plan.
+![Screenshot 2024-02-15 at 00 52 56](https://github.com/myfeng10/PlannerX-www/assets/116971980/a8496254-a447-4deb-9efc-7ea743419806)
